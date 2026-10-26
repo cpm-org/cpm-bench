@@ -10,5 +10,10 @@
     "cpm-bench": "file:../..",
     // The unit tests' framework: its test programs and the benchmark program link side by side.
     "cpm-test": "^0.1.0"
+  },
+  "profiles": {
+    // The benchmarks are measured by running their program directly. `cpm test` puts the compiler's directory on PATH,
+    // where Windows finds the compiler's runtime DLLs; a shell may not, so the release build links the runtime in.
+    "release": { "runtime": "static" }
   }
 }

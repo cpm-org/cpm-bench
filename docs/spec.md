@@ -128,6 +128,7 @@ Options:
 - **Check mode** runs each benchmark's code once, including what it passes to `measure()`. It reports only failures (`parse: failed: <message>`), then a count: `checked 3 benchmarks`, or `checked 3 benchmarks: 1 failed`.
   - It is on with `--check`, and when the environment variable `CPM_TEST` is set, which `cpm test` does (cpm-args reads the variable as a boolean). `--measure` turns it off.
   - So benchmarks kept in `tests/*.test.cpp` are checked by `cpm test` in a fraction of a second, and measured when their program is run directly. `cpm build --release --tests` builds them optimized.
+  - On Windows, a program run directly finds the compiler's runtime DLLs only through `PATH`, which `cpm test` sets and a shell may not. The example project's release profile sets `"runtime": "static"`, and the README recommends it.
 
 ## 6. Reports
 

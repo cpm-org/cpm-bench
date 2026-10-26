@@ -144,6 +144,7 @@ Options:
 - **Patterns:** `words_bench.test "split*" "~*short*"` runs the benchmarks whose names start with `split`, except those containing `short`. A pattern that matches no benchmark is an error, so a typo doesn't pass unnoticed.
 - **Check mode** runs each benchmark's code once, including what it gives `measure()`, and reports only failures and a count. `cpm test` sets `CPM_TEST`, which turns check mode on; `--check` does too, and `--measure` turns it off.
 - **Exit status:** 0 when every benchmark ran, 1 when one failed or the JSON file couldn't be written, and 2 for a bad command line.
+- **On Windows,** a program run from a shell finds the compiler's runtime DLLs only when the compiler's directory is on `PATH`. `cpm test` puts it there, but the compiler that `cpm setup --managed` installs isn't on your `PATH`. Add `"profiles": { "release": { "runtime": "static" } }` to your manifest so the program carries its runtime with it, as [examples/consumer](examples/consumer/cpm.jsonc) does.
 
 A program that needs its own `main()`, for setup, calls `cpm::bench::main(argc, argv)` instead of using `CPM_BENCH_MAIN()`. The library has no `main()` of its own. A project's test programs often link cpm-test too, and the linker could then take `main()` from the wrong library.
 
