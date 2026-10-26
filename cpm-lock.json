@@ -1,0 +1,56 @@
+{
+  "lockfileVersion": 1,
+  "importers": {
+    ".": {
+      "dependencies": {
+        "cpm-args": {
+          "specifier": "^0.1.0",
+          "version": "0.1.0"
+        },
+        "cpm-json": {
+          "specifier": "^0.1.0",
+          "version": "0.1.0"
+        }
+      },
+      "devDependencies": {
+        "cpm-test": {
+          "specifier": "^0.1.0",
+          "version": "0.1.0"
+        }
+      }
+    }
+  },
+  "packages": {
+    "cpm-args@0.1.0": {
+      "resolution": {
+        "integrity": "sha256:48ce65501bb3542f17f037c2eab03ba7d86f6dc2ccbd24addd3339a39a1531ec",
+        "registry": "https://cpm-registry.com/",
+        "type": "registry",
+        "url": "https://cpm-registry.com/packages/cpm-args/cpm-args-0.1.0.tar.gz"
+      },
+      "std": "c++20",
+      "type": "static-lib"
+    },
+    "cpm-json@0.1.0": {
+      "resolution": {
+        "integrity": "sha256:8d71447c7b2184597af83944ee1091c197a60dafcebc332d98da0847857cd8ef",
+        "registry": "https://cpm-registry.com/",
+        "type": "registry",
+        "url": "https://cpm-registry.com/packages/cpm-json/cpm-json-0.1.0.tar.gz"
+      },
+      "std": "c++20",
+      "type": "static-lib"
+    },
+    "cpm-test@0.1.0": {
+      "dev": true,
+      "resolution": {
+        "integrity": "sha256:875e4a2b2817f0efbc5129015cd8e00814c0bfcc5005d604a69fb0db5aaf5358",
+        "registry": "https://cpm-registry.com/",
+        "type": "registry",
+        "url": "https://cpm-registry.com/packages/cpm-test/cpm-test-0.1.0.tar.gz"
+      },
+      "std": "c++20",
+      "type": "static-lib"
+    }
+  }
+}

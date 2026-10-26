@@ -1,0 +1,14 @@
+// A project with benchmarks among its tests, the way a user's would be. CI checks them with `cpm test` and measures
+// them by running the program built with --release.
+{
+  "name": "consumer",
+  "version": "0.1.0",
+  "std": "c++20",
+  "type": "static-lib",
+  "devDependencies": {
+    // A user's project would have "cpm-bench": "^0.1.0" from `cpm install -D cpm-bench`.
+    "cpm-bench": "file:../..",
+    // The unit tests' framework: its test programs and the benchmark program link side by side.
+    "cpm-test": "^0.1.0"
+  }
+}
